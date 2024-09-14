@@ -1,0 +1,54 @@
+from django.shortcuts import render, HttpResponse
+
+def index (request,*args,**kwargs):
+    return HttpResponse("<h1> Hello World </h1>")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Create your views here.
