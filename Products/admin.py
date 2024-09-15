@@ -5,6 +5,6 @@ from .models import Product
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'description','price')
+    list_display = ('id', 'name', 'description','price','image')
 
 # Register your models here.

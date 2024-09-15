@@ -5,9 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link rel = "stylesheet" type="text/css" href=" {% static 'css/style.css' %} ">
+    <link rel = "stylesheet" type="text/css" href=" {% static 'css/index.css' %} ">
 </head>
 <body>
-    <h2>hello</h2>;
+    <h2>For sale</h2>
+
+    <ul>
+        
+        {% for product in list_products %}
+
+        <li> {{product.name}} - {{product.price}}
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+
+
 </body>
 </html>
