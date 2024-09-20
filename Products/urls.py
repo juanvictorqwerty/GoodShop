@@ -1,12 +1,13 @@
 from django.urls import path
-from .views import index
+from .views import CreateProduct, index
 from django.conf import settings
 from django.conf.urls.static import static
-from django.contrib import admin
+
 
 urlpatterns = [
     path ("",index, name="index"),
-    path ('admin/', admin.site.urls),
+    #product creation form without using the admin
+    path ("create-product/",CreateProduct.as_view(),name="create_product"), #create-product is an arbitrary name
 ]
 
 if settings.DEBUG :

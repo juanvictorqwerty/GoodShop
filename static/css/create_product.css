@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+}
+.wrapper{
+    border-radius: 5%;
+    border-color: orange;
+    background-color: beige;
+    width: 500px;
+    height: fit-content;
+    justify-content: center;
+    padding: 30px 40px;
+
+}
+.wrapper.input-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

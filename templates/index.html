@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link rel = "stylesheet" type="text/css" href=" {% static 'css/index.css' %} ">
-</head>
-<body>
-    <h2>For sale</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <link rel = "stylesheet" type="text/css" href=" {% static 'css/index.css' %} ">
+    </head>
+    <body>
+        <h2>For sale</h2>
 
-    <ul>
-        
-        {% for product in list_products %}
+        <ul>
+            
+            {% for product in list_products %} <!--on prend les produits de la base de donnees pour les afficher-->
 
-        <li> {{product.name}} - {{product.price}}
+            <li>
 
-        </li>
+                {% if product.price == 0 %}
 
-        {% endfor %}
+                <strong style = "color :red">{{product.name|upper}} - {{product.price}}</strong>
 
-    </ul>
+                {% else %}
+
+                {{product.name|upper}} - {{product.price}} <!--Display dynamic variables-->
+
+            </li>
+            {% endif %}
+            {% endfor %}
+
+        </ul>
 
 
-
-</body>
+    </body>
 </html>
