@@ -21,5 +21,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("Products.urls")),#setting our app as the default entry point
+    path("", include("Products.urls",namespace="products")),#setting our app as the default entry point
 ]

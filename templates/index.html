@@ -1,35 +1,15 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome</title>
-        <link rel = "stylesheet" type="text/css" href=" {% static 'css/index.css' %} ">
-    </head>
-    <body>
-        <h2>For sale</h2>
+{% extends 'base.html' %}
 
-        <ul>
-            
-            {% for product in list_products %} <!--on prend les produits de la base de donnees pour les afficher-->
+{% block content %} <!--the name of the block is "content"-->
 
-            <li>
+<h1 class="text-center-display-3"> List </h1>
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 
-                {% if product.price == 0 %}
-
-                <strong style = "color :red">{{product.name|upper}} - {{product.price}}</strong>
-
-                {% else %}
-
-                {{product.name|upper}} - {{product.price}} <!--Display dynamic variables-->
-
-            </li>
-            {% endif %}
-            {% endfor %}
-
-        </ul>
-
-
-    </body>
-</html>
+{% endblock %}

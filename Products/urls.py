@@ -3,6 +3,7 @@ from .views import CreateProduct, index
 from django.conf import settings
 from django.conf.urls.static import static
 
+app_name = "Products"
 
 urlpatterns = [
     path ("",index, name="index"),
