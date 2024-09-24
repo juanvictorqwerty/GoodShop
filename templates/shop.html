@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %} <!--the name of the block is "content"-->
+
+<h1 class="text-center-display-3"> </h1>
+
+<div class = "row">
+ {% for list_products in list_products %}
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <img src="{{list_products.image.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{list_products.name}}</h5>
+            <p class="card-text">{{list_products.description}}</p>
+            <a href="#" class="btn btn-primary" >COMMAND</a>
+          </div>
+      </div>
+    </div>  
+
+    {% endfor %}
+  </div>
+
+
+{% endblock %}
